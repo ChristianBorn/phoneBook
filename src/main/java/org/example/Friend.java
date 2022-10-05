@@ -12,7 +12,7 @@ public class Friend extends Contact {
     }
 
     public String toString() {
-        return "Name: "+super.contactName+"\nTelefonnummer: "+telephoneNumber;
+        return "Name: "+super.contactName+"; Telefonnummer: "+telephoneNumber+"\n";
     }
 
     public String getName() {

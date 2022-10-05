@@ -8,8 +8,8 @@ public class Smartphone implements Radio, GPS {
     private ArrayList<Contact> contactList;
 
 
-    public void Smartphone(String modelName, String manufacturerName, ArrayList<Contact> contactList) {
-        this.modelName = manufacturerName;
+    public Smartphone(String modelName, String manufacturerName, ArrayList<Contact> contactList) {
+        this.modelName = modelName;
         this.manufacturerName = manufacturerName;
         this.contactList = contactList;
     }
@@ -54,7 +54,7 @@ public class Smartphone implements Radio, GPS {
 
     public String toString() {
         return "Modelname: "+modelName+
-                "\nManufacturer "+manufacturerName+
-                "\nContacts "+contactList;
+                "\nManufacturer: "+manufacturerName+
+                "\nContacts:\n"+contactList;
     }
 }
