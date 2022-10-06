@@ -1,5 +1,6 @@
 package org.example;
 
+import java.security.InvalidParameterException;
 import java.util.ArrayList;
 
 public class Smartphone implements Radio, GPS {
@@ -18,14 +19,16 @@ public class Smartphone implements Radio, GPS {
         contactList.add(contact);
     }
 
-    public Contact getContactById(int id) {
-        try {
+
+    public Contact getContactById(int id) throws InvalidParameterException {
+        if (id < 0 || id > (contactList.size() - 1)) {
+            throw new InvalidParameterException("Invalid index, index has to be between 0 and "+
+                    (contactList.size() - 1));
+        }
+        else {
             return contactList.get(id);
         }
-        catch (NullPointerException e) {
-            System.out.println("No Contact found at given index");
-            return null;
-        }
+
     }
 
     public Contact getContactByName(String name) {

@@ -20,6 +20,7 @@ public class Main {
         System.out.println(myPhone.getContactByName("Hans"));
         myPhone.removeContactByName("Hans");
         System.out.println(myPhone);
+        System.out.println(myPhone.getContactById(5));
 //        System.out.println(myPhone.startRadio());
 //        System.out.println(myPhone.stopRadio());
 //        System.out.println(myPhone.getPosition());
